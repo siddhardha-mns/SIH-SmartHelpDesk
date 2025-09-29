@@ -148,16 +148,22 @@ def authentication_page():
     </div>
     """, unsafe_allow_html=True)
     
+    # Check if database is available
+    from auth_utils import AuthManager
+    auth_manager = AuthManager()
+    if not auth_manager.db.use_database:
+        st.info("🔧 **Demo Mode**: Database not configured. Using mock authentication for demonstration purposes.")
+    
     tab1, tab2 = st.tabs(["🔐 Login", "📝 Register"])
     
     with tab1:
         st.markdown("""
-        <div style="background: linear-gradient(45deg, #F3F4F6, #E5E7EB); padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;">
-            <h4>🎯 Demo Credentials</h4>
-            <ul>
-                <li><strong>Admin:</strong> admin / password123</li>
-                <li><strong>IT Support:</strong> it_support1 / password123</li>
-                <li><strong>Employee:</strong> employee1 / password123</li>
+        <div style="background: linear-gradient(45deg, #F3F4F6, #E5E7EB); padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; color: black;">
+            <h4 style="color: black;">🎯 Demo Credentials</h4>
+            <ul style="color: black;">
+                <li style="color: black;"><strong>Admin:</strong> admin / password123</li>
+                <li style="color: black;"><strong>IT Support:</strong> it_support1 / password123</li>
+                <li style="color: black;"><strong>Employee:</strong> employee1 / password123</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
@@ -205,11 +211,11 @@ def show_role_indicator():
     color = role_colors.get(user.role, '#6B7280')
     
     st.markdown(f"""
-    <div style="background: linear-gradient(90deg, {color}, {color}90); color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between;">
-        <div>
-            <strong>👤 {user.full_name}</strong> | {user.role}
+    <div style="background: {color}; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="color: white;">
+            <strong style="color: white;">👤 {user.full_name}</strong> | <span style="color: white;">{user.role}</span>
         </div>
-        <div style="font-size: 0.9rem; opacity: 0.9;">
+        <div style="font-size: 0.9rem; opacity: 0.9; color: white;">
             {user.department or 'No Department'}
         </div>
     </div>

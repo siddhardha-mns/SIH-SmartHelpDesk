@@ -60,6 +60,7 @@ st.markdown("""
     
     .card {
         background: white;
+        color: #1F2937;
         padding: 1.5rem;
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -69,6 +70,7 @@ st.markdown("""
     
     .workflow-step {
         background: linear-gradient(45deg, #F8F9FA 0%, #E5E7EB 100%);
+        color: #1F2937;
         padding: 1rem;
         border-radius: 8px;
         margin: 0.5rem 0;
@@ -77,6 +79,7 @@ st.markdown("""
     
     .tech-category {
         background: #F8F9FA;
+        color: #1F2937;
         padding: 1rem;
         border-radius: 8px;
         margin: 0.5rem 0;
@@ -168,12 +171,12 @@ def show_system_overview():
         st.markdown("### 📥 Input Channels")
         st.markdown("""
         <div class="card">
-            <ul>
-                <li>🤖 Chatbot</li>
-                <li>📧 Email</li>
-                <li>🖥️ GLPI System</li>
-                <li>⚙️ Solman System</li>
-                <li>📱 Mobile App</li>
+            <ul style="color: #1F2937;">
+                <li style="color: #1F2937;">🤖 Chatbot</li>
+                <li style="color: #1F2937;">📧 Email</li>
+                <li style="color: #1F2937;">🖥️ GLPI System</li>
+                <li style="color: #1F2937;">⚙️ Solman System</li>
+                <li style="color: #1F2937;">📱 Mobile App</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
@@ -182,13 +185,13 @@ def show_system_overview():
         st.markdown("### ⚡ Core AITix System")
         st.markdown("""
         <div class="card">
-            <ul>
-                <li>🔄 Unified Ingestion Layer</li>
-                <li>🧠 NLP Processing Engine</li>
-                <li>🎯 Intelligent Routing AI</li>
-                <li>🤖 Self-Service & Resolution Bot</li>
-                <li>📚 Knowledge Base Hub</li>
-                <li>🚨 Alerting Module (Email & SMS)</li>
+            <ul style="color: #1F2937;">
+                <li style="color: #1F2937;">🔄 Unified Ingestion Layer</li>
+                <li style="color: #1F2937;">🧠 NLP Processing Engine</li>
+                <li style="color: #1F2937;">🎯 Intelligent Routing AI</li>
+                <li style="color: #1F2937;">🤖 Self-Service & Resolution Bot</li>
+                <li style="color: #1F2937;">📚 Knowledge Base Hub</li>
+                <li style="color: #1F2937;">🚨 Alerting Module (Email & SMS)</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
@@ -197,10 +200,10 @@ def show_system_overview():
         st.markdown("### 👥 Stakeholders & Outputs")
         st.markdown("""
         <div class="card">
-            <ul>
-                <li>🛠️ IT Support Teams</li>
-                <li>👨‍💼 Employees</li>
-                <li>📖 Knowledge Base</li>
+            <ul style="color: #1F2937;">
+                <li style="color: #1F2937;">🛠️ IT Support Teams</li>
+                <li style="color: #1F2937;">👨‍💼 Employees</li>
+                <li style="color: #1F2937;">📖 Knowledge Base</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
@@ -221,8 +224,8 @@ def show_system_overview():
     for step in workflow_steps:
         st.markdown(f"""
         <div class="workflow-step">
-            <strong>{step['icon']} Step {step['step']}: {step['title']}</strong><br>
-            {step['description']}
+            <strong style="color: #1F2937;">{step['icon']} Step {step['step']}: {step['title']}</strong><br>
+            <span style="color: #1F2937;">{step['description']}</span>
         </div>
         """, unsafe_allow_html=True)
 
@@ -234,24 +237,24 @@ def show_system_overview():
     with tech_col1:
         st.markdown("""
         <div class="tech-category">
-            <h4>🎨 Frontend</h4>
-            <p>React.js • Tailwind CSS • React Native</p>
+            <h4 style="color: #1F2937;">🎨 Frontend</h4>
+            <p style="color: #1F2937;">React.js • Tailwind CSS • React Native</p>
         </div>
         """, unsafe_allow_html=True)
 
     with tech_col2:
         st.markdown("""
         <div class="tech-category">
-            <h4>🧠 Backend & AI</h4>
-            <p>Python (Flask/Django) • Hugging Face Transformers • spaCy • Node.js • Socket.IO</p>
+            <h4 style="color: #1F2937;">🧠 Backend & AI</h4>
+            <p style="color: #1F2937;">Python (Flask/Django) • Hugging Face Transformers • spaCy • Node.js • Socket.IO</p>
         </div>
         """, unsafe_allow_html=True)
 
     with tech_col3:
         st.markdown("""
         <div class="tech-category">
-            <h4>🗄️ Database</h4>
-            <p>PostgreSQL • Elasticsearch</p>
+            <h4 style="color: #1F2937;">🗄️ Database</h4>
+            <p style="color: #1F2937;">PostgreSQL • Elasticsearch</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -260,16 +263,16 @@ def show_system_overview():
     with tech_col4:
         st.markdown("""
         <div class="tech-category">
-            <h4>☁️ Infrastructure</h4>
-            <p>Docker • Kubernetes • AWS / Azure</p>
+            <h4 style="color: #1F2937;">☁️ Infrastructure</h4>
+            <p style="color: #1F2937;">Docker • Kubernetes • AWS / Azure</p>
         </div>
         """, unsafe_allow_html=True)
 
     with tech_col5:
         st.markdown("""
         <div class="tech-category">
-            <h4>🔗 Integrations & Alerts</h4>
-            <p>SendGrid • Twilio API</p>
+            <h4 style="color: #1F2937;">🔗 Integrations & Alerts</h4>
+            <p style="color: #1F2937;">SendGrid • Twilio API</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -290,8 +293,8 @@ def show_system_overview():
         with col:
             st.markdown(f"""
             <div class="card">
-                <h4>{challenge['icon']} {challenge['challenge']}</h4>
-                <p><strong>Solution:</strong> {challenge['solution']}</p>
+                <h4 style="color: #1F2937;">{challenge['icon']} {challenge['challenge']}</h4>
+                <p style="color: #1F2937;"><strong style="color: #1F2937;">Solution:</strong> {challenge['solution']}</p>
             </div>
             """, unsafe_allow_html=True)
 
@@ -304,10 +307,10 @@ def show_system_overview():
         st.markdown("### 👨‍💼 For Employees")
         st.markdown("""
         <div class="card">
-            <ul>
-                <li>✨ Improved Experience</li>
-                <li>⚡ Faster Resolutions</li>
-                <li>👁️ Transparency</li>
+            <ul style="color: #1F2937;">
+                <li style="color: #1F2937;">✨ Improved Experience</li>
+                <li style="color: #1F2937;">⚡ Faster Resolutions</li>
+                <li style="color: #1F2937;">👁️ Transparency</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
@@ -316,10 +319,10 @@ def show_system_overview():
         st.markdown("### 🛠️ For IT Teams")
         st.markdown("""
         <div class="card">
-            <ul>
-                <li>📈 Efficiency</li>
-                <li>📉 Reduced Workload</li>
-                <li>💡 Insights</li>
+            <ul style="color: #1F2937;">
+                <li style="color: #1F2937;">📈 Efficiency</li>
+                <li style="color: #1F2937;">📉 Reduced Workload</li>
+                <li style="color: #1F2937;">💡 Insights</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
@@ -328,10 +331,10 @@ def show_system_overview():
         st.markdown("### 🏢 For POWERGRID")
         st.markdown("""
         <div class="card">
-            <ul>
-                <li>🚀 Higher Productivity</li>
-                <li>💰 Cost Savings</li>
-                <li>🎛️ Central Governance</li>
+            <ul style="color: #1F2937;">
+                <li style="color: #1F2937;">🚀 Higher Productivity</li>
+                <li style="color: #1F2937;">💰 Cost Savings</li>
+                <li style="color: #1F2937;">🎛️ Central Governance</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
@@ -400,7 +403,7 @@ def show_system_overview():
         with cols[i]:
             st.markdown(f"""
             <div class="card" style="text-align: center;">
-                <h4>{metric['title']}</h4>
+                <h4 style="color: #1F2937;">{metric['title']}</h4>
                 <p style="color: #DC2626;">Before: {metric['before']}</p>
                 <p style="color: #22C55E;">After: {metric['after']}</p>
                 <p style="color: #1E3A8A; font-weight: bold;">↗️ +{metric['improvement']} improvement</p>
