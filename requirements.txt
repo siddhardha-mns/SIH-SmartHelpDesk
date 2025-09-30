@@ -1,0 +1,21 @@
+# Core Streamlit dependencies
+streamlit>=1.50.0
+
+# Data processing and visualization
+pandas>=2.3.2
+plotly>=6.3.0
+
+# Database connectivity
+psycopg2-binary>=2.9.10
+
+# Authentication and security
+bcrypt>=5.0.0
+
+# Environment management
+python-dotenv>=1.1.1
+
+# Additional dependencies that might be needed
+# (These are commonly used with Streamlit applications)
+altair>=5.0.0
+numpy>=1.24.0
+requests>=2.31.0
